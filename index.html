@@ -9,23 +9,47 @@
     :root {
       color-scheme: light dark;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
     body {
       box-sizing: border-box;
       max-width: 760px;
       margin: 0 auto;
-      padding: 2rem 1.25rem 4rem;
+      padding: 2.5rem 1.25rem 4rem;
     }
 
     h1 {
-      line-height: 1.3;
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.7rem, 5vw, 2.2rem);
+      line-height: 1.4;
     }
 
     .updated {
+      margin: 0;
       color: #777;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+    }
+
+    hr {
+      height: 1px;
+      margin: 1.75rem 0;
+      border: 0;
+      background: currentColor;
+      opacity: 0.18;
+    }
+
+    h2 {
+      margin: 0 0 0.65rem;
+      font-size: 1.08rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 0.8rem;
     }
 
     a {
@@ -35,18 +59,42 @@
 </head>
 <body>
   <main>
-    <h1>Servant#1437 プライバシーポリシー</h1>
-    <p class="updated">最終更新日：2026年10月14日</p>
+    <header>
+      <h1>Servant#1437 プライバシーポリシー</h1>
+      <p class="updated">最終更新日：2026年10月21日</p>
+    </header>
 
-    <p>Servant#1437（アプリケーションID：1558473304224829623）は、機能の提供に必要な範囲でDiscordユーザーID、ユーザー名、サーバー情報、メンバーの参加日時・ロール、コマンド入力内容を取得・参照します。</p>
+    <hr>
 
-    <p>これらの情報は、ロール管理、ユーザー情報の表示、サーバーのメンバー数・Bot数の確認、モデレーション、マッチング、および前日のメッセージ数によるランキングの作成に利用します。ランキング処理ではメッセージ検索結果を一時的に扱いますが、メッセージ本文は集計に使用せず、Bot独自のデータベースやファイルには保存しません。</p>
+    <section>
+      <h2>取得する情報と利用目的</h2>
+      <p>Servant#1437（アプリケーションID：1558473304224829623）は、機能の提供に必要な範囲で、DiscordユーザーID、ユーザー名、サーバー情報、メンバーの参加日時・ロール、コマンド入力内容を取得・参照します。</p>
+      <p>これらの情報は、ロール管理、ユーザー情報の表示、サーバーのメンバー数・Bot数の確認、モデレーション、マッチング、および活発度ランキングの作成に利用します。</p>
+      <p>ランキングでは、前日のメッセージ検索結果から通常ユーザーの投稿数を投稿者ごとに集計し、BotおよびWebhookによる投稿は除外します。メッセージ本文はランキングに使用せず、Bot独自のデータベースやファイルに保存しません。</p>
+    </section>
 
-    <p>マッチング情報はBotの稼働中にメモリ上で管理し、成立または募集から24時間後に待機リストから削除します。ランキングのロール更新に必要な前回1位のユーザーIDは、Discord上の専用フォーラムスレッドに保存します。自動削除は行わないため、削除を希望する場合は下記連絡先までお問い合わせください。ランキング投稿やマッチング用スレッドなど、Discordサーバー上に作成された情報は、各サーバーの設定・管理者の運用に従います。</p>
+    <hr>
 
-    <p>本BotはDiscord APIを利用します。Discordにおける情報の取扱いについては<a href="https://discord.com/privacy" rel="noopener noreferrer">Discordのプライバシーポリシー</a>をご確認ください。</p>
+    <section>
+      <h2>保存と削除</h2>
+      <p>マッチング情報はBotの稼働中にメモリ上で管理し、成立または募集から24時間後に待機リストから削除します。</p>
+      <p>ランキングのロール更新に必要な前回1位のユーザーIDは、Discord上の専用フォーラムスレッドに保存します。自動削除は行わないため、削除を希望する場合は下記連絡先までお問い合わせください。</p>
+      <p>ランキング投稿やマッチング用スレッドなど、Discordサーバー上に作成された情報は、各サーバーの設定・管理者の運用に従います。</p>
+    </section>
 
-    <p>お問い合わせ先：developer.jp（Discordユーザー名）</p>
+    <hr>
+
+    <section>
+      <h2>外部サービス</h2>
+      <p>本BotはDiscord APIを利用します。Discordにおける情報の取扱いについては<a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Discordのプライバシーポリシー</a>をご確認ください。</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>お問い合わせ先：developer.jp（Discordユーザー名）</p>
+    </section>
   </main>
 </body>
 </html>
